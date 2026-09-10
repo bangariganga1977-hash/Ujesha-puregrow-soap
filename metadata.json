@@ -1,0 +1,6 @@
+{
+  "name": "FDA Report: Pure Glow Handmade Soap",
+  "description": "FDA regulatory compliance report, classification analysis, MoCRA checklist, and labeling guide for Pure Glow Handmade Soap.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
