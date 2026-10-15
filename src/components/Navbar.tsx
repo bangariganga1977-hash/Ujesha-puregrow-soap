@@ -1,6 +1,7 @@
 import React from 'react';
 import { ShieldAlert, FileText, CheckSquare, Sparkles, Layers, Award, Printer, Download, BookOpen, HelpCircle } from 'lucide-react';
 import { TabType } from '../types';
+import { PureGlowLogo } from './PureGlowLogo';
 
 interface NavbarProps {
   activeTab: TabType;
@@ -69,20 +70,25 @@ export const Navbar: React.FC<NavbarProps> = ({
       {/* Main Title & Action Bar */}
       <div id="navbar-action-bar" className="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
-          <div className="flex items-center gap-2">
-            <h1 className="text-xl font-bold tracking-tight text-stone-900 font-serif">
-              Pure Glow Handmade Soap
-            </h1>
+          <div className="flex items-center gap-3">
+            <PureGlowLogo size="sm" showSubtitle={false} onClick={() => setActiveTab('store')} />
             <span id="badge-regulatory-status" className="px-2.5 py-0.5 text-xs font-semibold rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300">
               Cosmetic Under MoCRA
             </span>
           </div>
-          <p className="text-xs text-stone-500 mt-0.5">
-            Comprehensive Regulatory Analysis, Ingredient Review, Packaging Integrity & Labeling Compliance
+          <p className="text-xs text-stone-500 mt-1">
+            Official FDA Dossier, Ingredient Purity Audits & MoCRA Compliance for Pure Glow Soaps
           </p>
         </div>
 
         <div className="flex items-center gap-2 self-start md:self-auto">
+          <button
+            id="navbar-return-to-store-button"
+            onClick={() => setActiveTab('store')}
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-md bg-[#4A3728] text-white hover:bg-[#362419] transition-colors shadow-2xs cursor-pointer"
+          >
+            <span>Back to Store</span>
+          </button>
           <button
             id="navbar-print-dossier-button"
             onClick={onPrint}
